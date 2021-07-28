@@ -1,5 +1,5 @@
 import CallingCard from "./CallingCard.js";
-
+import CellPhone from "./CellPhone.js";
 
 //let card1 = new CallingCard(10); // card1 costs 10 cents / minute to use
 
@@ -32,12 +32,22 @@ import CallingCard from "./CallingCard.js";
 
 //console.log(card);
 
-let card1 = new CallingCard(11);
-card1.addDollars(3);         // 300 cents / 11 = 27.2727272... = 27 minutes added
-card1.getRemainingMinutes(); // => returns 27
-console.log(card1);
+// let card1 = new CallingCard(11);
+// card1.addDollars(3);         // 300 cents / 11 = 27.2727272... = 27 minutes added
+// card1.getRemainingMinutes(); // => returns 27
+// console.log(card1);
 
-let card2 = new CallingCard(17);
-card2.addDollars(3);         // 300 cents / 17 = 17.647... = 17 minutes added
-card2.getRemainingMinutes();
-console.log(card2); // => returns 17
+// let card2 = new CallingCard(17);
+// card2.addDollars(3);         // 300 cents / 17 = 17.647... = 17 minutes added
+// card2.getRemainingMinutes();
+// console.log(card2); // => returns 17
+
+
+let card = new CallingCard(10);
+card.addDollars(1);
+
+let phone = new CellPhone(card);
+
+phone.call('555-1212')
+
+console.log(phone.getHistory());
