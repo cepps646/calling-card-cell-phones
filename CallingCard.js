@@ -13,7 +13,7 @@ class CallingCard {
         //dollars = this.centsBalance
         
         this.centsBalance += dollars*100;
-        this.minutesBalance = this.centsBalance/this.centsPerMinute;
+        this.minutesBalance = Math.floor(this.centsBalance/this.centsPerMinute);
         return this.centsBalance;
         
 
